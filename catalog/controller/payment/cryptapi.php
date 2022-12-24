@@ -39,6 +39,9 @@ class CryptAPI extends \Opencart\System\Engine\Controller
               }
             }
             var_dump($da_cry);
+            if (isset($da_cry)){
+              return false;
+            }
 
             foreach ($da_cry as $selected) {
                   foreach (json_decode(str_replace("&quot;", '"', $this->config->get('payment_cryptapi_cryptocurrencies_array_cache')), true) as $token => $coin) {
