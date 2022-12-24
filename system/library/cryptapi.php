@@ -99,7 +99,7 @@ class CryptAPIHelper
         $ca_params = [
             'apikey' => $api_key,
             'callback' => $callback_url,
-            'pending' => $this->pending,
+            'pending' => true,
             'convert' => 1,
         ];
 
