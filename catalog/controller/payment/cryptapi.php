@@ -116,7 +116,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
                 $minTx = floatval($info->minimum_transaction_coin);
 
                 $cryptoTotal = \Opencart\Extension\CryptAPI\System\Library\CryptAPIHelper::get_conversion($order_info['currency_code'], $selected, $total, $disable_conversion);
-                var_dump($selected);
+                //var_dump($selected);
                 // return;
                 if ($cryptoTotal < $minTx) {
                     $message = $this->module->l('Payment error: ', 'validation');
