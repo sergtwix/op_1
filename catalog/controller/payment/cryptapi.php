@@ -39,7 +39,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
               }
             }
             var_dump($da_cry);
-            if (isset($da_cry)){
+            if (!isset($da_cry)){
               return false;
             }
 
