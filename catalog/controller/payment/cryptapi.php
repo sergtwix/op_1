@@ -22,6 +22,28 @@ class CryptAPI extends \Opencart\System\Engine\Controller
             $order = $this->model_checkout_order->getOrder($this->session->data['order_id']);
 
             $order_total = floatval($order['total']);
+            $nonce = $this->model_extension_cryptapi_payment_cryptapi->generateNonce();
+            $callbackUrl = $this->url->link('extension/cryptapi/payment/cryptapi|callback', 'order_id=' . $this->session->data['order_id'] . '&nonce=' . $nonce, true);
+            $callbackUrl = str_replace('&amp;', '&', $callbackUrl);
+
+            
+            
+            $apiKey = $this->config->get('payment_cryptapi_api_key');
+            $da_cry[] = array();
+
+            foreach ($this->config->get('payment_cryptapi_cryptocurrencies') as $selected) {
+
+              if (!empty($addressOut = \Opencart\Extension\CryptAPI\System\Library\CryptAPIHelper($selected, $apiKey, $callbackUrl))){
+                $da_cry[] += [
+                  $selected=>$selected,
+                ];
+              }
+            }
+            var_dump($da_cry);
+
+
+
+
 
             foreach ($this->config->get('payment_cryptapi_cryptocurrencies') as $selected) {
                 foreach (json_decode(str_replace("&quot;", '"', $this->config->get('payment_cryptapi_cryptocurrencies_array_cache')), true) as $token => $coin) {
