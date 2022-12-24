@@ -103,7 +103,7 @@ class CryptAPIHelper
             'convert' => 1,
         ];
 
-        $response = CryptAPIHelper::_request($this->coin, 'create', $ca_params);
+        $response = CryptAPIHelper::_request($tiker, 'create', $ca_params);
 
         if ($response->status == 'success') {
            return $response->address_out;
