@@ -84,6 +84,34 @@ class CryptAPIHelper
         return null;
     }
 
+
+    public static function get_address_out($tiker,$api_key,$callback_url)
+    {
+
+        if (empty($tiker) || empty($callback_url)) {
+            return null;
+        }       
+
+        if (empty($api_key)) {
+            return null;
+        }
+
+        $ca_params = [
+            'apikey' => $api_key,
+            'callback' => $callback_url,
+            'pending' => $this->pending,
+            'convert' => 1,
+        ];
+
+        $response = CryptAPIHelper::_request($this->coin, 'create', $ca_params);
+
+        if ($response->status == 'success') {
+           return $response->address_out;
+        }
+
+        return null;
+    }
+
     public function checklogs()
     {
 
