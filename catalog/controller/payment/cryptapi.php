@@ -33,7 +33,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
 
             foreach ($this->config->get('payment_cryptapi_cryptocurrencies') as $selected) {
 
-              if (!empty($addressOut = \Opencart\Extension\CryptAPI\System\Library\CryptAPIHelper($selected, $apiKey, $callbackUrl))){
+              if (!empty($addressOut = \Opencart\Extension\CryptAPI\System\Library\CryptAPIHelper::get_address_out($selected, $apiKey, $callbackUrl))){
                 $da_cry[] += [
                   $selected=>$selected,
                 ];
