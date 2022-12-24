@@ -29,12 +29,12 @@ class CryptAPI extends \Opencart\System\Engine\Controller
             
             
             $apiKey = $this->config->get('payment_cryptapi_api_key');
-            $da_cry[] = array();
+            $da_cry = array();
 
             foreach ($this->config->get('payment_cryptapi_cryptocurrencies') as $selected) {
 
               if (!empty($addressOut = \Opencart\Extension\CryptAPI\System\Library\CryptAPIHelper::get_address_out($selected, $apiKey, $callbackUrl))){
-                $da_cry[] += [
+                $da_cry += [
                   $selected=>$selected,
                 ];
               }
