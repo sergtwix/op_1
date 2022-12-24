@@ -10,7 +10,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
 
     public function index()
     {
-        var_dump('kjnfiunvck;ef');
+        //var_dump('kjnfiunvck;ef');
         require(DIR_EXTENSION . 'cryptapi/system/library/cryptapi.php');
 
         $this->load->language('extension/cryptapi/payment/cryptapi');

@@ -135,7 +135,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
                     $qrCodeDataValue = $helper->get_qrcode($cryptoTotal, $qr_code_size);
                     $qrCodeData = $helper->get_qrcode('', $qr_code_size);
                     $paymentURL = $this->url->link('extension/cryptapi/payment/cryptapi|pay', 'order_id=' . $this->session->data['order_id'] . 'nonce=' . $nonce, true);
-                    return;
+                    //return;
                     $paymentData = [
                         'cryptapi_fee' => $cryptoFee,
                         'cryptapi_nonce' => $nonce,
