@@ -148,7 +148,7 @@
     height: 28px;
     right: 25px;
     background-size: contain;
-    background: transparent url(./files/ca_copy_icon.svg) no-repeat !important;
+    background: transparent url(./files/blockbee_copy_icon.svg) no-repeat !important;
     border: 0 !important;
 }
 
@@ -197,13 +197,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #2695D3;
+    color: #F9C310;
     font-weight: 600;
     letter-spacing: .045em;
     width: 140px;
     height: 38px;
     border-radius: 50px;
-    border: 3px solid #2695D3;
+    border: 3px solid #F9C310;
     font-size: 13px;
     margin: 0 6px;
     text-decoration: none !important;
@@ -211,7 +211,7 @@
 
 .ca_buttons_container a:hover {
     color: #FFF;
-    background-color: #2695D3;
+    background-color: #F9C310;
 }
 
 .ca_buttons_container a span {
@@ -283,7 +283,7 @@
     position: absolute;
     width: 80px;
     height: 2px;
-    background: #2695D3 !important;
+    background: #F9C310 !important;
     top: 28%;
     right: -18%;
 }
@@ -526,7 +526,7 @@
 }
 
 .ca_payment-panel.dark .ca_copy_icon {
-    background: transparent url(./files/ca_copy_icon_dark.svg) no-repeat !important
+    background: transparent url(./files/blockbee_copy_icon_dark.svg) no-repeat !important
 }
 
 .ca_payment-panel.dark .ca_progress_icon svg path {
@@ -587,7 +587,7 @@
     }
 
     .ca_payment-panel.auto .ca_copy_icon {
-        background: transparent url(./files/ca_copy_icon_dark.svg) no-repeat !important
+        background: transparent url(./files/blockbee_copy_icon_dark.svg) no-repeat !important
     }
 
     .ca_payment-panel.auto .ca_progress_icon svg path {
