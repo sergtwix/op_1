@@ -7,7 +7,7 @@ $base_url = sprintf(
 );
 
 // Text
-$_['text_title'] = 'Cryptocurrency' . ' <img src="' . $base_url . 'image/catalog/cryptapi/payment.png" alt="cryptapi" style="height:23px" />';
+$_['text_title'] = 'Cryptocurrency' . ' <img src="' . $base_url . 'image/catalog/cryptapi/payment.png" alt="blockbee" style="height:23px" />';
 $_['text_legend'] = 'Pay with cryptocurrency';
 $_['text_basket'] = 'Basket';
 $_['text_checkout'] = 'Checkout';
@@ -22,7 +22,7 @@ $_['text_moment'] = 'a moment';
 
 $_['button_pay'] = 'Pay now';
 
-$_['branding_logo'] = '<img src="' . $base_url . 'image/catalog/cryptapi/payment_success.png" alt="cryptapi" style="width:122px;" />';
+$_['branding_logo'] = '<img src="' . $base_url . 'image/catalog/cryptapi/payment_success.png" alt="blockbee" style="width:122px;" />';
 $_['wallet_text'] = 'WALLET';
 $_['qr_code_text_open'] = 'Open QR CODE';
 $_['qr_code_text_close'] = 'Close QR CODE';

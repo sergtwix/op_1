@@ -312,7 +312,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
             'crypto_allowed_value' => $crypto_allowed_value,
         ];
 
-        return $this->response->setOutput($this->load->view('extension/cryptapi/payment/cryptapi_success', $params));
+        return $this->response->setOutput($this->load->view('extension/cryptapi/payment/blockbee_success', $params));
     }
 
     public function after_purchase(&$route, &$data, &$output)
@@ -355,7 +355,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
         $data['store'] = html_entity_decode($order['store_name'], ENT_QUOTES, 'UTF-8');
         $data['store_url'] = $order['store_url'];
 
-        $html = $this->load->view('extension/cryptapi/payment/cryptapi_email', $data);
+        $html = $this->load->view('extension/cryptapi/payment/blockbee_email', $data);
 
         $mail->setTo($order['email']);
         $mail->setFrom($this->config->get('config_email'));
