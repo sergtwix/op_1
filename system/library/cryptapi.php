@@ -344,7 +344,7 @@ class CryptAPIHelper
         $remaining = $total;
         $remaining_pending = $total;
         $remaining_fiat = $total_fiat;
-
+        print('+++++++++++++++++++++++++++++++++++++++++++');
         if (!empty($history)) {
             foreach ($history as $uuid => $item) {
                 if ((int)$item['pending'] === 0) {
