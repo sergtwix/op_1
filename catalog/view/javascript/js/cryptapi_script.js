@@ -3,7 +3,7 @@ function check_status(ajax_url) {
     
     function status_loop() {
         if (is_paid) return;
-        alert(ajax_url);
+        
         jQuery.getJSON(ajax_url, function (data) {
             let waiting_payment = jQuery('.waiting_payment');
             let waiting_network = jQuery('.waiting_network');

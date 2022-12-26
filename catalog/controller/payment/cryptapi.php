@@ -262,7 +262,7 @@ class CryptAPI extends \Opencart\System\Engine\Controller
 
         $ajaxUrl = $this->url->link('extension/cryptapi/payment/cryptapi|status', 'order_id=' . $order['order_id'], true);
         $ajaxUrl = str_replace('&amp;', '&', $ajaxUrl);
-
+        var_dump($ajaxUrl);
         $allowed_to_value = array(
             'btc',
             'eth',
