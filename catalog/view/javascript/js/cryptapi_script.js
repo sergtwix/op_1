@@ -1,6 +1,6 @@
 function check_status(ajax_url) {
     let is_paid = false;
-
+    alert(ajax_url);
     function status_loop() {
         if (is_paid) return;
 
